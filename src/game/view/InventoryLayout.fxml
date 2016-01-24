@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.InventoryController">
+   <children>
+      <ScrollPane layoutX="350.0" layoutY="22.0" prefHeight="345.0" prefWidth="235.0">
+         <content>
+            <ListView fx:id="inventoryList" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="equipButton" layoutX="243.0" layoutY="22.0" mnemonicParsing="false" onAction="#OnEquipUseButtonClicked" text="Use/Equip" />
+      <TextArea fx:id="log" editable="false" layoutX="243.0" layoutY="145.0" prefHeight="212.0" prefWidth="98.0" promptText="Log" />
+      <Button fx:id="backButton" layoutX="275.0" layoutY="85.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" text="Back" />
+      <TextArea fx:id="player1Info" editable="false" layoutX="14.0" layoutY="22.0" prefHeight="156.0" prefWidth="173.0" />
+      <TextArea fx:id="player2Info" editable="false" layoutX="14.0" layoutY="186.0" prefHeight="167.0" prefWidth="173.0" />
+      <Pane fx:id="selectionPane" layoutX="187.0" layoutY="22.0" prefHeight="334.0" prefWidth="57.0" visible="false">
+         <children>
+            <Button fx:id="equipPlayer1" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" onAction="#OnEquipPlayer1ButtonClicked" text="&lt;-" />
+            <Button fx:id="equipPlayer2" layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#OnEquipPlayer2ButtonClicked" text="&lt;-" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

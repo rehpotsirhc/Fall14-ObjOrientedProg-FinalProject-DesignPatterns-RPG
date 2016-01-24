@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.CharacterSelectController">
+   <children>
+      <Button fx:id="readyUp" layoutX="268.0" layoutY="336.0" mnemonicParsing="false" onAction="#OnReadyUpButtonClicked" text="Ready Up" />
+      <HBox layoutY="55.0" prefHeight="117.0" spacing="5.0" AnchorPane.bottomAnchor="228.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <TextField fx:id="character1Name" prefHeight="31.0" prefWidth="88.0" />
+            <SplitMenuButton fx:id="menuButton1" mnemonicParsing="false" prefHeight="31.0" prefWidth="146.0" text="Type">
+              <items>
+                  <MenuItem fx:id="fighter1" mnemonicParsing="false" onAction="#OnFighter1ButtonClicked" text="Fighter" />
+                <MenuItem fx:id="healer1" mnemonicParsing="false" onAction="#OnHealer1ButtonClicked" text="Healer" />
+                <MenuItem fx:id="mage1" mnemonicParsing="false" onAction="#OnMage1ButtonClicked" text="Mage" />
+              </items>
+            </SplitMenuButton>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <TextArea fx:id="description1" editable="false" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="180.0" prefHeight="117.0" spacing="5.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <TextField fx:id="character2Name" prefHeight="31.0" prefWidth="88.0" />
+            <SplitMenuButton fx:id="menuButton2" mnemonicParsing="false" prefHeight="31.0" prefWidth="146.0" text="Type">
+               <items>
+                  <MenuItem fx:id="fighter2" mnemonicParsing="false" onAction="#OnFighter2ButtonClicked" text="Fighter" />
+                  <MenuItem fx:id="healer2" mnemonicParsing="false" onAction="#OnHealer2ButtonClicked" text="Healer" />
+                  <MenuItem fx:id="mage2" mnemonicParsing="false" onAction="#OnMage2ButtonClicked" text="Mage" />
+               </items>
+            </SplitMenuButton>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <TextArea fx:id="description2" editable="false" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

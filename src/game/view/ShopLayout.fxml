@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.view.ShopController">
+   <children>
+      <Pane layoutX="26.0" layoutY="23.0" prefHeight="289.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="289.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" textAlignment="CENTER" />
+                        <ListView fx:id="inventoryList" onMouseClicked="#OnInventoryItemClicked" prefHeight="260.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="371.0" layoutY="23.0" prefHeight="289.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="289.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" spacing="5.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Store" textAlignment="CENTER" />
+                        <ListView fx:id="shopList" onMouseClicked="#OnShopItemClicked" prefHeight="266.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Button fx:id="sellButton" layoutX="92.0" layoutY="323.0" mnemonicParsing="false" onAction="#OnSellButtonClicked" text="Sell" />
+      <Button fx:id="buyButton" layoutX="519.0" layoutY="323.0" mnemonicParsing="false" onAction="#OnBuyButtonClicked" text="Buy" />
+      <Pane layoutX="245.0" layoutY="69.0" prefHeight="105.0" prefWidth="107.0">
+         <children>
+            <Text layoutX="31.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Money" />
+            <TextArea fx:id="moneyText" editable="false" layoutY="24.0" prefHeight="75.0" prefWidth="107.0" />
+         </children>
+      </Pane>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#OnBackButtonClicked" text="Back" />
+      <TextArea fx:id="sellPriceText" editable="false" layoutX="157.0" layoutY="325.0" prefHeight="31.0" prefWidth="88.0" />
+      <TextArea fx:id="buyPriceText" editable="false" layoutX="393.0" layoutY="325.0" prefHeight="31.0" prefWidth="88.0" />
+   </children>
+</AnchorPane>
